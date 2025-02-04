@@ -25,5 +25,5 @@ function calcularImc(pessoa) {
     }
 }
 
-const p1 = new Pessoa('Fulano', 110, 1.80);
+const p1 = new Pessoa('Heloísa', 85, 1.75);
 calcularImc(p1);
