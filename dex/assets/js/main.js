@@ -36,4 +36,4 @@ pokeApi.getPokemon(0, 10).then((pokemons = []) => {
     // .finally(function () {
     //     console.log('done')
 // })
-    
+    /**/
