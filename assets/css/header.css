@@ -2,12 +2,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/header.svg');
 }
 
 .photo{
     width: 220px;
     height: 220px;
-    object-fit: cover;
+    /* object-fit: cover; */
     border-radius: 50%;
 }
 
@@ -28,11 +42,11 @@
 }
 
 .info p{
-    
+    display: flex;
     margin: .5rem;
     flex-direction: row;
     align-items: center;
-
+    font-size: 1.2rem;
 }
 
 .info p::before {
@@ -44,4 +58,42 @@
     background-size: cover;
     vertical-align: middle;
     margin-right: 5px;
+}
+
+.info .job::before {
+    background-image: url('../img/avatar.png');
+}
+.info .location::before {
+    background-image: url('../img/placeholder.png');
+}
+.info .email::before {
+    background-image: url('../img/email.png');
+}
+.info .phone::before {
+    background-image: url('../img/phone.png');
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas:
+            "photo title"
+            "photo information"
+        ;
+    }
+
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 210px;
+    }
+
+    .header .info {
+        grid-area: information;
+    }
 }
