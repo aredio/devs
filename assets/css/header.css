@@ -18,3 +18,30 @@
     margin-top: 1rem;
     font-family: 'neue-machina-regular',sans-serif;
 }
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.info p{
+    
+    margin: .5rem;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.info p::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/avatar.png');
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+}
