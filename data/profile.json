@@ -8,6 +8,14 @@
   "skills": {
     "hardSkills": [
       {
+        "name": "C#",
+        "logo": "/assets/imgs/csharp.png"
+      },
+      {
+        "name": "Javascript",
+        "logo": "/assets/imgs/js.png"
+      },
+      {
         "name": "Nodejs",
         "logo": "/assets/imgs/nodejs.png"
       },
@@ -26,6 +34,14 @@
       {
         "name": "Mongodb",
         "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mongodb.png"
+      },
+      {
+        "name": "PHP",
+        "logo": "/assets/imgs/php.png"
+      },
+      {
+        "name": "MySQL",
+        "logo": "/assets/imgs/mysql.png"
       },
       {
         "name": "Postgresql",
