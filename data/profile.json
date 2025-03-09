@@ -9,7 +9,7 @@
     "hardSkills": [
       {
         "name": "Nodejs",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/nodejs.png"
+        "logo": "/assets/imgs/nodejs.png"
       },
       {
         "name": "Java",
@@ -60,19 +60,19 @@
   ],
   "professionalExperience": [
     {
-      "name": "",
-      "period": "",
-      "description": ""
+      "name": "Fundação RTVE",
+      "period": "2022 - Atual",
+      "description": "IT Manager"
     },
     {
-      "name": "",
-      "period": "",
-      "description": ""
+      "name": "Jalles Machado S/A",
+      "period": "2017",
+      "description": "Estagiário de TI"
     },
     {
-      "name": "",
-      "period": "",
-      "description": ""
+      "name": "Freelancer",
+      "period": "2016 - Atual",
+      "description": "Desenvolvedor Full-Stack"
     }
   ]
 }

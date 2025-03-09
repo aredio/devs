@@ -33,7 +33,7 @@
     font-family: 'neue-machina-regular',sans-serif;
 }
 
-.info{
+.information{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -41,7 +41,7 @@
     margin-top: 1rem;
 }
 
-.info p{
+.information p{
     display: flex;
     margin: .5rem;
     flex-direction: row;
@@ -49,7 +49,7 @@
     font-size: 1.2rem;
 }
 
-.info p::before {
+.information p::before {
     content: '';
     display: inline-block;
     width: 16px;
@@ -60,17 +60,17 @@
     margin-right: 5px;
 }
 
-.info .job::before {
-    background-image: url('../img/avatar.png');
+.information .job::before {
+    background-image: url('/assets/img/avatar.png');
 }
-.info .location::before {
-    background-image: url('../img/placeholder.png');
+.information .location::before {
+    background-image: url('/assets/img/placeholder.png');
 }
-.info .email::before {
-    background-image: url('../img/email.png');
+.information .email::before {
+    background-image: url('/assets/img/email.png');
 }
-.info .phone::before {
-    background-image: url('../img/phone.png');
+.information .phone::before {
+    background-image: url('/assets/img/phone.png');
 }
 
 @media only screen and (min-width: 768px) {
@@ -78,7 +78,7 @@
         display: grid;
         grid-template-areas:
             "photo title"
-            "photo information"
+            "photo informationrmation"
         ;
     }
 
@@ -93,7 +93,7 @@
         max-width: 210px;
     }
 
-    .header .info {
-        grid-area: information;
+    .header .information {
+        grid-area: informationrmation;
     }
 }

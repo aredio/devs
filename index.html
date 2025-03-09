@@ -22,21 +22,26 @@
     <link rel="stylesheet" href="./assets/fonts/neue-machina-regular.otf">
 </head>
 <body>
-    <div class="main">
+    <main class="main">
         <header class="header">
-            <img src="https://avatars.githubusercontent.com/u/20635689?v=4" alt="Foto de Arédio" class="photo">
+            <img src="https://avatars.githubusercontent.com/u/20635689" alt="Foto de Perfil" class="photo" id="profile.photo">
 
-            <h1 class="title">Olá, eu sou <b>Arédio Filho</b></h1>
-            <div class="info">
-                <p class="job">Desenvolvedor Full-Stack</p>
-                <p class="location">Goianésia - GO</p>
-                <p class="phone">(62) 9 8160-9322</p>
-                <p class="email">aredio.filho@gmail.com</p>
+            <h1 class="title">
+                Olá, <br>eu sou <span id="profile.name">Carregando...</span>
+            </h1>
+
+            <div class="information">
+                <p class="job" id="profile.job">Carregando...</p>
+                <p class="location" id="profile.location">Carregando...</p>
+                <p class="phone">
+                    <a href="tel:(16) 9 9999-9999" id="profile.phone">Carregando...</a>
+                </p>
+                <p class="email">
+                    <a href="mailto:ex@mail.com" id="profile.email">carregando@mail.com</a>
+                </p>
             </div>
-            
         </header>
 
-        
         <section class="acordeon">
             <button class="trigger" type="button">
                 <h2>Skills</h2>
@@ -95,10 +100,7 @@
                 </ul>
             </div>
         </section>
-        
-        
-    </div>
-
+    </main>
     <script src="./js/acordeon.js"></script>
     <script src="./js/api.js"></script>
     <script src="./js/main.js"></script>
