@@ -48,13 +48,18 @@
   ],
   "portfolio": [
     {
-      "name": "Curso Ministrado na DIO para a criação de uma Pokedex",
-      "url": "https://github.com/RenanJPaula/js-developer-pokedex",
+      "name": "Site em desenovlvimento para a empresa Dr Ar Condicionado",
+      "url": "https://github.com/aredio/devs/tree/main/drArCondicionado",
       "github": true
     },
     {
-      "name": "Curso Ministrado na DIO para a criação de uma página de portfolio",
-      "url": "https://github.com/RenanJPaula/js-developer-portfolio",
+      "name": "Curso Ministrado na DIO para a criação de uma Pokedex",
+      "url": "https://github.com/aredio/devs/tree/main/javascriptPok%C3%A9Dex",
+      "github": true
+    },
+    {
+      "name": "Repositório geral de projetos desenvolvidos e em desenvolvimento",
+      "url": "https://github.com/aredio/devs/",
       "github": true
     }
   ],
