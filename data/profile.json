@@ -81,19 +81,19 @@
   ],
   "professionalExperience": [
     {
+      "name": "Freelancer",
+      "period": "2016 - Atual",
+      "description": "Desenvolvedor Full-Stack"
+    },
+    {
       "name": "Fundação RTVE",
       "period": "2022 - Atual",
-      "description": "IT Manager"
+      "description": "Programador de sistemas de informação"
     },
     {
       "name": "Jalles Machado S/A",
       "period": "2017",
       "description": "Estagiário de TI"
-    },
-    {
-      "name": "Freelancer",
-      "period": "2016 - Atual",
-      "description": "Desenvolvedor Full-Stack"
     }
   ]
 }
