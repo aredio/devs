@@ -9,15 +9,15 @@
     "hardSkills": [
       {
         "name": "C#",
-        "logo": "/assets/imgs/csharp.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/csharp.png"
       },
       {
         "name": "Javascript",
-        "logo": "/assets/imgs/js.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/js.png"
       },
       {
         "name": "Nodejs",
-        "logo": "/assets/imgs/nodejs.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/nodejs.png"
       },
       {
         "name": "Java",
@@ -37,11 +37,11 @@
       },
       {
         "name": "PHP",
-        "logo": "/assets/imgs/php.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/php.png"
       },
       {
         "name": "MySQL",
-        "logo": "/assets/imgs/mysql.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mysql.png"
       },
       {
         "name": "Postgresql",
@@ -81,19 +81,19 @@
   ],
   "professionalExperience": [
     {
+      "name": "Freelancer",
+      "period": "2016 - Atual",
+      "description": "Desenvolvedor Full-Stack"
+    },
+    {
       "name": "Fundação RTVE",
       "period": "2022 - Atual",
-      "description": "IT Manager"
+      "description": "Programador de sistemas de informação"
     },
     {
       "name": "Jalles Machado S/A",
       "period": "2017",
       "description": "Estagiário de TI"
-    },
-    {
-      "name": "Freelancer",
-      "period": "2016 - Atual",
-      "description": "Desenvolvedor Full-Stack"
     }
   ]
 }
