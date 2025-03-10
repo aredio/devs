@@ -9,15 +9,15 @@
     "hardSkills": [
       {
         "name": "C#",
-        "logo": "/assets/imgs/csharp.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/csharp.png"
       },
       {
         "name": "Javascript",
-        "logo": "/assets/imgs/js.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/js.png"
       },
       {
         "name": "Nodejs",
-        "logo": "/assets/imgs/nodejs.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/nodejs.png"
       },
       {
         "name": "Java",
@@ -37,11 +37,11 @@
       },
       {
         "name": "PHP",
-        "logo": "/assets/imgs/php.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/php.png"
       },
       {
         "name": "MySQL",
-        "logo": "/assets/imgs/mysql.png"
+        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mysql.png"
       },
       {
         "name": "Postgresql",
