@@ -1,7 +1,6 @@
-
 async function fetchProfileData() {
-    const url = 'https://github.com/aredio/devs/raw/refs/heads/main/folio/data/profile.json';
-    const response = await fetch(url)
-    const profileData = await response.json()
-    return profileData
+    const url = 'https://raw.githubusercontent.com/aredio/devs/refs/heads/gh-pages/data/profile.json';
+
+    const fetching = await fetch(url);
+    return await fetching.json();
 }
