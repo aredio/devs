@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.rarp.view.scnComponents.AutoCompleteComboBox?>
+<?import br.com.rarp.view.scnComponents.IntegerTextField?>
+<?import br.com.rarp.view.scnComponents.MaskTextField?>
+<?import br.com.rarp.view.scnComponents.SwitchButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.ImageViewButton?>
+<?import jfxtras.scene.control.ListView?>
+<?import jfxtras.scene.control.LocalDateTextField?>
+
+<AnchorPane fx:id="pnlPrincipal" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.rarp.view.scnCadastroConvenio.CadastroConvenioController">
+	<children>
+		<BorderPane layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+			<center>
+				<AnchorPane stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+					<children>
+						<TabPane fx:id="tbPane" focusTraversable="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+							<tabs>
+								<Tab closable="false" style="-fx-font-size: 14;" text="1 - Informações">
+									<content>
+										<AnchorPane>
+											<children>
+												<Label layoutY="58.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Nome(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<TextField fx:id="txtNome" layoutY="82.0" prefHeight="30.0" prefWidth="471.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+													<font>
+														<Font size="14.0" />
+													</font>
+												</TextField>
+                                    <Label layoutX="10.0" layoutY="68.0" stylesheets="@../style/style.css" text="Razão Social:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="62.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtRazaoSocial" layoutX="10.0" layoutY="92.0" prefHeight="30.0" prefWidth="471.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+												<GridPane layoutX="14.0" layoutY="254.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="258.0" />
+														<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="257.0" />
+													</columnConstraints>
+													<rowConstraints>
+                                          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+														<RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+														<RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+													<children>
+                                          <AnchorPane>
+                                             <children>
+                                                <Label layoutX="-142.0" layoutY="-22.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Registro da ANS(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtANS" layoutX="21.0" layoutY="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="28.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="200.0" GridPane.columnIndex="1">
+                                             <children>
+                                                <Label layoutX="-142.0" layoutY="-22.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Tipo(Obrigatório):" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <AutoCompleteComboBox fx:id="cmbTipo" layoutX="10.0" layoutY="36.0" prefWidth="150.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0" />
+                                             </children>
+                                          </AnchorPane>
+														<AnchorPane GridPane.rowIndex="1">
+															<children>
+																<Label layoutX="-142.0" layoutY="-22.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="CNPJ(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</Label>
+                                                <MaskTextField fx:id="txtCNPJ" cnpj="true" layoutX="4.0" layoutY="36.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="28.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </MaskTextField>
+															</children>
+														</AnchorPane>
+                        														<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        															<children>
+                        																<Label layoutX="21.0" layoutY="16.0" prefHeight="20.0" prefWidth="228.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Data de Nascimento(Obrigatório):" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+                        																	<font>
+                        																		<Font size="14.0" />
+                        																	</font>
+                        																</Label>
+                        																<LocalDateTextField fx:id="txtDataNasc" layoutX="38.0" layoutY="34.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0" />
+                        															</children>
+                        														</AnchorPane>
+														<AnchorPane GridPane.rowIndex="2">
+															<children>
+																<Label layoutX="7.0" layoutY="6.0" stylesheets="@../style/style.css" text="Logradouro:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</Label>
+																<TextField fx:id="txtLogradouro" layoutY="21.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="28.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</TextField>
+															</children>
+														</AnchorPane>
+														<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+															<children>
+																<Label layoutY="6.0" stylesheets="@../style/style.css" text="Número:" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</Label>
+																<TextField fx:id="txtNumero" layoutY="15.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</TextField>
+															</children>
+														</AnchorPane>
+														<AnchorPane GridPane.rowIndex="3">
+															<children>
+																<Label layoutX="14.0" layoutY="14.0" text="Complemento:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</Label>
+																<TextField fx:id="txtComplemento" layoutX="4.0" layoutY="24.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="28.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</TextField>
+															</children>
+														</AnchorPane>
+														<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+															<children>
+																<Label layoutX="7.0" layoutY="6.0" stylesheets="@../style/style.css" text="Cidade:" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</Label>
+																<AutoCompleteComboBox fx:id="cmbCidade" layoutY="26.0" prefWidth="150.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0" />
+															</children>
+														</AnchorPane>
+														<AnchorPane GridPane.rowIndex="4">
+															<children>
+																<Label layoutX="14.0" layoutY="6.0" text="CEP:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</Label>
+																<MaskTextField fx:id="txtCEP" cep="true" cpf="false" layoutX="14.0" layoutY="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="28.0">
+																	<font>
+																		<Font size="14.0" />
+																	</font>
+																</MaskTextField>
+															</children>
+														</AnchorPane>
+                        														<AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        															<children>
+                        																<Label layoutY="6.0" stylesheets="@../style/style.css" text="Bairro:" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+                        																	<font>
+                        																		<Font size="14.0" />
+                        																	</font>
+                        																</Label>
+                        																<TextField fx:id="txtBairro" layoutY="21.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+                        																	<font>
+                        																		<Font size="14.0" />
+                        																	</font>
+                        																</TextField>
+                        															</children>
+                        														</AnchorPane>
+													</children>
+												</GridPane>
+											</children>
+										</AnchorPane>
+									</content>
+								</Tab>
+								<Tab closable="false" style="-fx-font-size: 14;" text="2 - Informações">
+									<content>
+										<AnchorPane>
+											<children>
+												<GridPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="249.0" />
+														<ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="258.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+													<children>
+                                          <AnchorPane GridPane.columnIndex="1" />
+														<GridPane>
+															<columnConstraints>
+																<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+															</columnConstraints>
+															<rowConstraints>
+																<RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+																<RowConstraints maxHeight="259.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES" />
+															</rowConstraints>
+															<children>
+																<GridPane prefHeight="81.0" prefWidth="242.0">
+																	<columnConstraints>
+																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="164.0" />
+																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="42.0" />
+																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="62.0" minWidth="10.0" prefWidth="36.0" />
+																	</columnConstraints>
+																	<rowConstraints>
+																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+																	</rowConstraints>
+																	<children>
+																		<AnchorPane prefHeight="60.0" prefWidth="166.0">
+																			<children>
+																				<Label layoutX="14.0" layoutY="14.0" text="Telefone" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="4.0">
+																					<font>
+																						<Font size="14.0" />
+																					</font>
+																				</Label>
+																				<MaskTextField fx:id="txtTelefone" cpf="false" layoutX="3.0" layoutY="24.0" telefone="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+																					<font>
+																						<Font size="14.0" />
+																					</font>
+																				</MaskTextField>
+																			</children>
+																		</AnchorPane>
+																		<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+																			<children>
+																				<ImageViewButton fx:id="btnAdd" fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="27.0" onMouseClicked="#adicionarTelefone">
+																					<image>
+																						<Image url="@../img/add.png" />
+																					</image>
+																				</ImageViewButton>
+																			</children>
+																		</AnchorPane>
+																		<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+																			<children>
+																				<ImageViewButton fx:id="btnRemove" fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="26.0" onMouseClicked="#removerTelefone">
+																					<image>
+																						<Image url="@../img/rubbish-bin.png" />
+																					</image>
+																				</ImageViewButton>
+																			</children>
+																		</AnchorPane>
+																	</children>
+																</GridPane>
+																<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+																	<children>
+																		<ListView fx:id="lsTelefones" layoutX="-39.0" layoutY="-97.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+																	</children>
+																</AnchorPane>
+															</children>
+														</GridPane>
+													</children>
+												</GridPane>
+											</children>
+										</AnchorPane>
+									</content>
+								</Tab>
+							</tabs>
+						</TabPane>
+						<Label layoutX="-32.0" layoutY="-1.0" text="Código:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<IntegerTextField fx:id="txtCodigo" focusTraversable="false" layoutX="-32.0" layoutY="23.0" prefHeight="30.0" prefWidth="122.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</IntegerTextField>
+						<SwitchButton fx:id="sbAtivado" focusTraversable="false" layoutX="433.0" layoutY="24.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+						<Label layoutX="449.0" layoutY="5.0" prefWidth="72.0" text="Ativado:" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+                  <SwitchButton fx:id="sbAutorizado" focusTraversable="false" layoutX="128.0" layoutY="24.0" />
+                  <Label layoutX="128.0" layoutY="6.0" text="Autorizado:" AnchorPane.topAnchor="0.0" />
+					</children>
+				</AnchorPane>
+			</center>
+			<right>
+				<AnchorPane focusTraversable="true" BorderPane.alignment="CENTER">
+					<children>
+						<ImageView fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<image>
+								<Image url="@../img/agreement.png" />
+							</image>
+						</ImageView>
+						<Button fx:id="btnSalvar" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#salvar" prefHeight="66.0" prefWidth="108.0" text="Salvar" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../img/disquette.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Button>
+						<Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" mnemonicParsing="false" onAction="#voltar" prefHeight="66.0" prefWidth="108.0" text="Voltar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../img/back.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Button>
+					</children>
+				</AnchorPane>
+			</right>
+		</BorderPane>
+	</children>
+</AnchorPane>

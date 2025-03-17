@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/br/com/rarp/control/SistemaCtrl.java=UTF-8
+encoding//src/br/com/rarp/view/relatorios/GraficoPizza.jrxml=UTF-8
+encoding//src/br/com/rarp/view/relatorios/atendimento/RelatorioAtendimento.jrxml=UTF-8
+encoding//src/br/com/rarp/view/relatorios/encaminhamento/RelatorioEncaminhamento.jrxml=UTF-8
+encoding//src/br/com/rarp/view/relatorios/entradaPaciente/RelatorioEntrada.jrxml=UTF-8
+encoding//src/br/com/rarp/view/relatorios/limpeza/RelatorioLimpeza.jrxml=UTF-8
+encoding//src/br/com/rarp/view/relatorios/saidaPaciente/RelatorioSaida.jrxml=UTF-8
+encoding//src/br/com/rarp/view/scnManutencao/medico/MedicoController.java=UTF-8
+separateDerivedEncodings=true

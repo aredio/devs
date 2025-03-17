@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?> 
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pnMain" prefHeight="467.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.rarp.view.main.scnMain.MainController">
+	<top>
+		<BorderPane prefHeight="80.0" prefWidth="591.0" BorderPane.alignment="CENTER">
+			<top>
+				<MenuBar fx:id="mnbMenu" styleClass="panel" stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
+					<menus>
+						<Menu fx:id="mnArquivo" mnemonicParsing="false" text="Arquivo">
+							<items>
+								<MenuItem fx:id="mniOpcoes" mnemonicParsing="false" onAction="#opcoes" text="Opções">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniSair" mnemonicParsing="false" onAction="#sair" text="Sair">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="ESCAPE" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+							</items>
+						</Menu>
+						<Menu fx:id="mnCadastros" mnemonicParsing="false" text="Cadastros">
+							<items>
+								<MenuItem fx:id="mniFuncionarios" mnemonicParsing="false" onAction="#manterFuncionario" text="Cadastro de Funcionários">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniPacientes" mnemonicParsing="false" onAction="#manterPacientes" text="Cadastro de Pacientes">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniMedicos" mnemonicParsing="false" onAction="#manterMedicos" text="Cadastro de Médicos">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<SeparatorMenuItem mnemonicParsing="false" />
+								<MenuItem mnemonicParsing="false" onAction="#manterCargos" text="Cadastro de Cargos">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniLeitos" mnemonicParsing="false" onAction="#manterEspacos" text="Cadastro de Espaços">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniCidades" mnemonicParsing="false" onAction="#manterCidades" text="Cadastro de Cidades">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniEspecialidade" mnemonicParsing="false" onAction="#manterEspecialidade" text="Cadastro de Especialidade">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniConvenios" mnemonicParsing="false" onAction="#manterConvenios" text="Cadastro de Convênios">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+							</items>
+						</Menu>
+						<Menu fx:id="mnMovimentacoes" mnemonicParsing="false" text="Movimentações">
+							<items>
+								<MenuItem fx:id="mniEntradaPaciente" mnemonicParsing="false" onAction="#controlarEntrada" text="Entrada de Pacientes">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniAtendimento" mnemonicParsing="false" onAction="#controlarAtendimento" text="Atendimento">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniEncaminhamento" mnemonicParsing="false" onAction="#controlarEncaminhamento" text="Encaminhamento">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniSaida" mnemonicParsing="false" onAction="#controlarSaida" text="Saida de Paciente">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniLimpeza" mnemonicParsing="false" onAction="#controlarLimpeza" text="Limpeza">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+							</items>
+						</Menu>
+						<Menu fx:id="mnRelatorios" mnemonicParsing="false" text="Relatórios">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#relatorioEntrada" text="Entrada de Pacientes">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#relatorioAtendimento" text="Atendimentos">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#relatorioEncaminhamento" text="Encaminhamentos">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#relatorioSaida" text="Saida de Pacientes">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#relatorioLimpeza" text="Limpeza">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="L" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#consultaOnline" text="Consultas">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                     </items></Menu>
+						<Menu fx:id="mnSeguranca" mnemonicParsing="false" text="Segurança">
+							<items>
+								<CheckMenuItem fx:id="mniControleAcesso" mnemonicParsing="false" onAction="#ativarDesativarControleAcesso" text="Controle de Acesso" />
+								<MenuItem fx:id="mniUsuario" mnemonicParsing="false" onAction="#manterUsuario" text="Usuário">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniPerfilUsuario" mnemonicParsing="false" onAction="#manterPerfilUsuario" text="Perfil de Usuário">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+								<MenuItem fx:id="mniTrocarUsuario" mnemonicParsing="false" onAction="#trocarUsuario" text="Trocar Usuário">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="F9" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+									</accelerator>
+								</MenuItem>
+							</items>
+						</Menu>
+						<Menu fx:id="mnSobre" mnemonicParsing="false" text="Sobre" />
+					</menus>
+				</MenuBar>
+			</top>
+			<center>
+				<ToolBar fx:id="tlbBarraFerramentas" prefHeight="49.0" prefWidth="591.0" styleClass="panel" stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
+					<items>
+						<Button fx:id="btnFuncionarios" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#manterFuncionario" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Funcionários" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/funcionarios.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="btnPacientes" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#manterPacientes" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Pacientes" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/patient.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="btnMedicos" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#manterMedicos" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Médicos" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/medico.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="btnLeitos" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#manterEspacos" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Espaços" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/room.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+						<Button fx:id="btnEntrada" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#controlarEntrada" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Entrada" textAlignment="CENTER" wrapText="true">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/entrada.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="btnSaida" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#controlarSaida" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Saida" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/fracture.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+						<Button fx:id="btnAjuda" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Ajuda" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/Ajuda.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="btnSair" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#sair" prefHeight="60.0" prefWidth="85.0" stylesheets="@../../style/style.css" text="Sair" textAlignment="CENTER">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../img/sair.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+					</items>
+				</ToolBar>
+			</center>
+		</BorderPane>
+	</top>
+	<bottom>
+		<BorderPane prefHeight="25.0" prefWidth="644.0" styleClass="status-bar" stylesheets="@../../style/style.css" BorderPane.alignment="CENTER">
+			<left>
+				<BorderPane prefHeight="24.0" BorderPane.alignment="CENTER">
+					<left>
+						<AnchorPane prefHeight="24.0" prefWidth="24.0" BorderPane.alignment="CENTER">
+							<children>
+								<ImageView fx:id="imgControleAcesso" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+									<image>
+										<Image url="@../../img/security-system-desativada-16x16.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+					</left>
+					<center>
+						<Label fx:id="lblUsuarioSessao" text="Usuário da Sessão" BorderPane.alignment="CENTER">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+					</center>
+				</BorderPane>
+			</left>
+			<right>
+				<Label fx:id="lblRelogio" text="11/05/2017 21:30" BorderPane.alignment="CENTER">
+					<BorderPane.margin>
+						<Insets right="4.0" />
+					</BorderPane.margin>
+				</Label>
+			</right>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+		</BorderPane>
+	</bottom>
+	<center>
+		<AnchorPane fx:id="pnlContent" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fx:id="imgMain" fitHeight="400.0" fitWidth="780.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<image>
+						<Image url="@../../img/ImagemMain.jpg" />
+					</image>
+					<cursor>
+						<Cursor fx:constant="DEFAULT" />
+					</cursor>
+					<viewport>
+						<Rectangle2D />
+					</viewport>
+				</ImageView>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

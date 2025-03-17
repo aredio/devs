@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.rarp.view.scnComponents.AutoCompleteComboBox?>
+<?import br.com.rarp.view.scnComponents.IntegerTextField?>
+<?import br.com.rarp.view.scnComponents.SwitchButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalTimeTextField?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.rarp.view.scnControleSaida.ControleSaidaController">
+	<children>
+		<BorderPane layoutX="14.0" layoutY="14.0" prefHeight="391.0" prefWidth="523.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+			<center>
+				<AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="font" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+					<children>
+						<Label text="Código:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<IntegerTextField fx:id="txtCodigo" accessibleText="Codigo interno do usuário" editable="false" focusTraversable="false" layoutY="24.0" prefHeight="30.0" prefWidth="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</IntegerTextField>
+						<Label layoutX="264.0" layoutY="9.0" prefHeight="20.0" prefWidth="68.0" text="Ativado:" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<SwitchButton fx:id="sbAtivado" focusTraversable="false" layoutX="262.0" layoutY="43.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="58.0" minHeight="58.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.0" minHeight="58.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="58.0" minHeight="58.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="58.0" prefWidth="178.0">
+                           <children>
+                              <Label layoutY="6.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Data(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="txtData" layoutX="-7.0" layoutY="17.0" prefHeight="30.0" prefWidth="175.0" styleClass="font" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutY="6.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Hora(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <LocalTimeTextField fx:id="txtHora" layoutX="14.0" layoutY="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutY="6.0" styleClass="obrigatorio" text="Entrada de Paciente(Obrigatório):" AnchorPane.topAnchor="0.0" />
+                              <AutoCompleteComboBox fx:id="cmbEntradaPaciente" layoutX="8.0" layoutY="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutY="6.0" styleClass="obrigatorio" text="Estado do Paciente(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextArea fx:id="txtEstadoPaciente" layoutY="-61.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+					</children>
+				</AnchorPane>
+			</center>
+			<right>
+				<AnchorPane prefHeight="384.0" prefWidth="106.0" BorderPane.alignment="CENTER">
+					<children>
+						<ImageView fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../img/exit.png" />
+                     </image>
+						</ImageView>
+						<Button fx:id="btnSalvar" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#salvar" prefHeight="66.0" prefWidth="108.0" text="Salvar" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../img/disquette.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Button>
+						<Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" mnemonicParsing="false" onAction="#voltar" prefHeight="66.0" prefWidth="108.0" text="Voltar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../img/back.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Button>
+					</children>
+				</AnchorPane>
+			</right>
+		</BorderPane>
+	</children>
+</AnchorPane>

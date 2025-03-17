@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.rarp.view.scnComponents.AutoCompleteComboBox?>
+<?import br.com.rarp.view.scnComponents.IntegerTextField?>
+<?import br.com.rarp.view.scnComponents.TextFieldFormatter?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.rarp.view.scnConsulta.ConsultaController">
+   <top>
+      <Label text="Consulta Online" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="8.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <right>
+      <AnchorPane prefHeight="365.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="109.0" fitWidth="126.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+               <image>
+                  <Image url="@../img/Communities__Networks-128.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnVoltar" contentDisplay="TOP" layoutX="16.0" layoutY="251.0" mnemonicParsing="false" onAction="#volta" prefHeight="83.0" prefWidth="97.0" text="Voltar" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="16.0">
+               <graphic>
+                  <ImageView fitHeight="83.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="123.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="btnImprimir" contentDisplay="TOP" layoutX="16.0" layoutY="156.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="97.0" text="Imprimir" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="156.0">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Print-80.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="365.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="btnPesquisar" layoutX="468.0" layoutY="23.0" mnemonicParsing="false" onAction="#consultar" prefHeight="33.0" prefWidth="37.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="23.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/if_search_173095.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextFieldFormatter fx:id="txtPesquisa" layoutX="128.0" layoutY="27.0" prefHeight="25.0" prefWidth="331.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="27.0" />
+            <AutoCompleteComboBox fx:id="cmbTipoDocumento" layoutX="8.0" layoutY="27.0" prefHeight="25.0" prefWidth="107.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="27.0" />
+            <Label layoutX="8.0" layoutY="6.0" text="Documento" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="6.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="64.0" text="Serie" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="232.0" layoutY="64.0" text="Numeração" AnchorPane.leftAnchor="232.0" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <IntegerTextField fx:id="txtSerie" layoutX="7.0" layoutY="84.0" prefHeight="25.0" prefWidth="211.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="84.0" />
+            <IntegerTextField fx:id="txtNumerecao" layoutX="232.0" layoutY="84.0" prefHeight="25.0" prefWidth="228.0" />
+            <TableView fx:id="tbvResultado" layoutX="11.0" layoutY="132.0" prefHeight="290.0" prefWidth="496.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="132.0">
+              <columns>
+                <TableColumn fx:id="tbcDataEntrada" prefWidth="75.0" text="Data" />
+                <TableColumn fx:id="tbcHospital" prefWidth="146.0" text="Hospital" />
+                  <TableColumn fx:id="tblMedico" minWidth="4.0" prefWidth="176.0" text="Médico" />
+                  <TableColumn fx:id="tbcDescricaoMedica" prefWidth="288.0" text="Descriçao Medica" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

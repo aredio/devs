@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.rarp.view.scnComponents.AutoCompleteComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalDateTextField?>
+
+<BorderPane fx:id="pnlPrincipal" prefHeight="474.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane prefHeight="73.0" prefWidth="720.0" styleClass="font" stylesheets="@../style/style.css">
+               <children>
+                  <AutoCompleteComboBox fx:id="cmbCampo" layoutX="8.0" layoutY="28.0" onAction="#cmbCampoChange" prefHeight="30.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+                  <AutoCompleteComboBox fx:id="cmbComparacao" layoutX="224.0" layoutY="32.0" prefHeight="30.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" />
+                  <AutoCompleteComboBox fx:id="cmbTermo" layoutX="234.0" layoutY="42.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="122.0" />
+                  <LocalDateTextField fx:id="txtTermoData" layoutX="570.0" layoutY="47.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="122.0" />
+                  <TextField fx:id="txtTermo" layoutX="428.0" layoutY="32.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="122.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="27.0" text="Campo:" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="174.0" layoutY="27.0" text="Comparação:" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="334.0" layoutY="27.0" prefHeight="20.0" text="Termo:" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="600.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnPesquisar" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="519.0" layoutY="24.0" mnemonicParsing="false" onAction="#pesquisar" prefHeight="60.0" prefWidth="114.0" text="Pesquisar" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/research.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Label fx:id="lblTitle" alignment="CENTER" contentDisplay="CENTER" layoutY="-7.0" prefHeight="62.0" prefWidth="720.0" style="-fx-font-weight: bold; -fx-background-color: #c0c0c0;" text="Manutenção de Entrada de pacientes" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="8.0" top="8.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="font" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="8.0" left="8.0" />
+         </padding>
+         <center>
+            <TableView fx:id="tblManutencao" prefHeight="200.0" prefWidth="200.0" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin></TableView>
+         </center>
+      </BorderPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="130.0" styleClass="font" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnInserir" contentDisplay="TOP" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#inserir" prefHeight="60.0" text="Inserir" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnAlterar" contentDisplay="TOP" layoutX="8.0" layoutY="68.0" mnemonicParsing="false" onAction="#alterar" prefHeight="60.0" prefWidth="98.0" text="Alterar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnVisualizar" contentDisplay="TOP" layoutX="17.0" layoutY="150.0" mnemonicParsing="false" onAction="#visualizar" prefHeight="60.0" prefWidth="98.0" text="Visualizar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="148.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/more-details-circular-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnVoltar" contentDisplay="TOP" layoutX="27.0" layoutY="160.0" mnemonicParsing="false" onAction="#voltar" prefHeight="60.0" prefWidth="98.0" text="Voltar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" />
+         </padding>
+      </AnchorPane>
+   </right>
+</BorderPane>

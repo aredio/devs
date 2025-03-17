@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.rarp.view.scnComponents.AutoCompleteComboBox?>
+<?import br.com.rarp.view.scnComponents.SelectionNode?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalTimeTextField?>
+
+<BorderPane prefHeight="541.0" prefWidth="796.0"
+	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+	<center>
+		<BorderPane prefHeight="200.0" prefWidth="200.0"
+			styleClass="font" stylesheets="@../../style/style.css"
+			BorderPane.alignment="CENTER">
+			<center>
+				<AnchorPane style="-fx-background-color: #FFFFFF;"
+					styleClass="font" stylesheets="@../../style/style.css"
+					BorderPane.alignment="CENTER">
+					<children>
+						<GridPane layoutX="14.0" AnchorPane.leftAnchor="8.0"
+							AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="120.0"
+									prefWidth="120.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="25.0"
+									minWidth="25.0" prefWidth="25.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="120.0"
+									prefWidth="120.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="120.0"
+									prefWidth="120.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="25.0"
+									minWidth="25.0" prefWidth="25.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="120.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="58.0" minHeight="58.0"
+									prefHeight="58.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<AnchorPane prefHeight="58.0" prefWidth="339.0">
+									<children>
+										<DatePicker fx:id="txtDataIni" layoutX="2.0"
+											layoutY="29.0" prefHeight="30.0" prefWidth="139.0"
+											AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+											AnchorPane.topAnchor="24.0" />
+										<Label layoutY="6.0" text="Data da movimentação:"
+											AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane GridPane.columnIndex="2">
+									<children>
+										<DatePicker fx:id="txtDataFin" prefHeight="30.0"
+											prefWidth="134.0" AnchorPane.leftAnchor="0.0"
+											AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="24.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane GridPane.columnIndex="3">
+									<children>
+										<LocalTimeTextField fx:id="txtHoraIni"
+											layoutY="28.0" prefHeight="30.0" prefWidth="98.0"
+											AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0"
+											AnchorPane.topAnchor="24.0" />
+										<Label layoutY="6.0" text="Hora da movimentação:"
+											AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="0.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane GridPane.columnIndex="5">
+									<children>
+										<LocalTimeTextField fx:id="txtHoraFin"
+											layoutY="14.0" prefHeight="30.0" prefWidth="91.0"
+											AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+											AnchorPane.topAnchor="24.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="58.0" prefWidth="33.0"
+									GridPane.columnIndex="1">
+									<children>
+										<Label alignment="CENTER" contentDisplay="CENTER"
+											layoutX="7.0" layoutY="29.0" text="à" AnchorPane.leftAnchor="0.0"
+											AnchorPane.rightAnchor="0.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.columnIndex="4">
+									<children>
+										<Label alignment="CENTER" contentDisplay="CENTER"
+											layoutX="9.0" layoutY="29.0" text="à" AnchorPane.leftAnchor="0.0"
+											AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0" />
+									</children>
+								</AnchorPane>
+							</children>
+						</GridPane>
+						<GridPane layoutX="-26.0" layoutY="117.0"
+							AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0"
+							AnchorPane.topAnchor="66.0">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+									prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints maxHeight="58.0" minHeight="58.0"
+									prefHeight="58.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<AnchorPane prefHeight="58.0" prefWidth="178.0">
+									<children>
+										<AutoCompleteComboBox fx:id="cmbEspaco"
+											acceptEmptyValue="true" emptyString="&lt;Todos&gt;" layoutY="24.0"
+											styleClass="font" stylesheets="@../../style/style.css"
+											AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="4.0"
+											AnchorPane.topAnchor="24.0" />
+										<Label text="Espaço:" AnchorPane.leftAnchor="0.0"
+											AnchorPane.topAnchor="0.0">
+											<font>
+												<Font size="14.0" />
+											</font>
+										</Label>
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.columnIndex="1">
+									<children>
+										<AutoCompleteComboBox fx:id="cmbUsuario"
+											acceptEmptyValue="true" emptyString="&lt;Todos&gt;" layoutY="22.0"
+											prefHeight="30.0" prefWidth="221.0" AnchorPane.leftAnchor="4.0"
+											AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="24.0" />
+										<Label text="Usuário:" AnchorPane.leftAnchor="4.0"
+											AnchorPane.topAnchor="0.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.columnIndex="2">
+									<children>
+										<Label layoutY="4.0" text="Funcionário de Limpeza:"
+											AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="0.0" />
+										<AutoCompleteComboBox fx:id="cmbFuncionarioLimpeza"
+											acceptEmptyValue="true" emptyString="&lt;Todos&gt;" layoutY="24.0"
+											prefHeight="30.0" prefWidth="221.0" AnchorPane.leftAnchor="4.0"
+											AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="24.0" />
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.columnIndex="3">
+									<children>
+										<Label layoutY="4.0" text="Status:"
+											AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="0.0" />
+										<AutoCompleteComboBox fx:id="cmbStatus"
+											acceptEmptyValue="true" emptyString="&lt;Todos&gt;" layoutY="24.0"
+											prefHeight="30.0" prefWidth="221.0" AnchorPane.leftAnchor="4.0"
+											AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+									</children>
+								</AnchorPane>
+							</children>
+						</GridPane>
+						<Label layoutX="8.0" layoutY="163.0" text="Leitos:"
+							AnchorPane.topAnchor="124.0" />
+						<ScrollPane layoutX="9.0" layoutY="188.0" prefHeight="152.0"
+							prefWidth="663.0" AnchorPane.leftAnchor="8.0"
+							AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="148.0">
+							<content>
+								<SelectionNode fx:id="pnlLeitos"
+									multipleSelection="true" prefHeight="155.0" prefWidth="662.0"
+									prefWrapLength="531.0" />
+							</content>
+						</ScrollPane>
+						<TableView fx:id="tblLimpezas" layoutX="8.0" layoutY="306.0"
+							prefHeight="167.0" prefWidth="663.0" AnchorPane.bottomAnchor="8.0"
+							AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0"
+							AnchorPane.topAnchor="306.0">
+							<columns>
+								<TableColumn fx:id="cmnCodigo" prefWidth="75.0"
+									text="Código" />
+								<TableColumn fx:id="cmnData" prefWidth="103.0" text="Data" />
+								<TableColumn fx:id="cmnHora" prefWidth="100.0" text="Hora" />
+								<TableColumn fx:id="cmnUsuario" prefWidth="200.0"
+									text="Usuário" />
+								<TableColumn fx:id="cmnFuncionarioLimpeza" minWidth="200.0"
+									prefWidth="200.0" text="Funcionário de limpeza" />
+								<TableColumn fx:id="cmnStatus" minWidth="80.0" text="Ativo" />
+							</columns>
+						</TableView>
+					</children>
+				</AnchorPane>
+			</center>
+		</BorderPane>
+	</center>
+	<top>
+		<AnchorPane prefHeight="60.0" prefWidth="546.0"
+			style="-fx-background-color: #FF4500;">
+			<children>
+				<Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0"
+					prefWidth="546.0" style="-fx-background-color: #00008B;" text="Relatório de Limpeza"
+					textFill="WHITE" textOverrun="CENTER_ELLIPSIS"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<font>
+						<Font name="System Bold" size="30.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+	</top>
+	<right>
+		<AnchorPane prefHeight="633.0" prefWidth="125.0"
+			snapToPixel="false" style="-fx-background-color: #FFFFFF;"
+			styleClass="font" stylesheets="@../../style/style.css"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Button fx:id="btnAtualizar" contentDisplay="TOP" layoutX="29.0"
+					layoutY="14.0" mnemonicParsing="false" onAction="#atualizar"
+					prefHeight="70.0" prefWidth="94.0" text="Atualizar"
+					AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0"
+					AnchorPane.topAnchor="8.0">
+					<graphic>
+						<ImageView fitHeight="32.0" fitWidth="32.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../img/if_search_173095.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btnImprimir" contentDisplay="TOP" layoutX="8.0"
+					layoutY="78.0" mnemonicParsing="false" onAction="#imprimir"
+					prefHeight="70.0" text="Imprimir" AnchorPane.leftAnchor="8.0"
+					AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="86.0">
+					<graphic>
+						<ImageView fitHeight="32.0" fitWidth="32.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../img/Print-80.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button fx:id="btnVoltar" contentDisplay="TOP" layoutX="14.0"
+					layoutY="391.0" mnemonicParsing="false" onAction="#voltar"
+					prefHeight="70.0" text="Voltar" AnchorPane.bottomAnchor="8.0"
+					AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+					<graphic>
+						<ImageView fitHeight="32.0" fitWidth="32.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../img/back.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+			</children>
+		</AnchorPane>
+	</right>
+
+</BorderPane>

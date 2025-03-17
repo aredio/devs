@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.rarp.view.scnComponents.AutoCompleteComboBox?>
+<?import br.com.rarp.view.scnComponents.IntegerTextField?>
+<?import br.com.rarp.view.scnComponents.SwitchButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlPrincipal" prefHeight="476.0" prefWidth="520.0" styleClass="font" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.rarp.view.scnCadastroUsuario.CadastroUsuarioController">
+	<children>
+		<BorderPane layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+			<center>
+				<AnchorPane snapToPixel="false" BorderPane.alignment="CENTER">
+					<children>
+                  <AutoCompleteComboBox fx:id="cmbFuncionario" layoutY="259.0" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="256.0" />
+                  <AutoCompleteComboBox fx:id="cmbPerfilUsuario" layoutX="28.0" layoutY="201.0" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="198.0" />
+						<Label text="Código:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<IntegerTextField fx:id="txtCodigo" accessibleText="Codigo interno do usuário" disable="true" layoutY="24.0" prefHeight="30.0" prefWidth="122.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</IntegerTextField>
+						<Label layoutY="58.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Nome(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="58.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<Label layoutY="116.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Usuário(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="116.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<Label layoutY="174.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Perfil de Usuário(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="174.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<Label layoutY="232.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Funcionário(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="232.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<TextField fx:id="txtNome" accessibleText="Este campo define o nome do usuario" layoutY="82.0" prefHeight="25.0" prefWidth="429.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</TextField>
+						<TextField fx:id="txtUsuario" accessibleText="Este campo define o nome do usuário utilizado para relaizar o login" layoutY="140.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</TextField>
+						<Label layoutX="264.0" layoutY="9.0" prefHeight="20.0" prefWidth="68.0" text="Ativado:" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Label>
+						<SwitchButton fx:id="sbAtivado" layoutX="262.0" layoutY="43.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                  <Label fx:id="lblSenha" layoutY="294.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Senha(Obrigatório):" AnchorPane.topAnchor="290.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSenha" accessibleText="Este campo define o nome do usuário utilizado para relaizar o login" layoutX="-3.0" layoutY="321.0" prefHeight="30.0" prefWidth="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="314.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblSenha1" layoutX="3.0" layoutY="378.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Confirma Senha(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="348.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSenha1" accessibleText="Este campo define o nome do usuário utilizado para relaizar o login" layoutX="3.0" layoutY="398.0" prefHeight="30.0" prefWidth="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="372.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblSenha2" layoutX="3.0" layoutY="402.0" styleClass="obrigatorio" stylesheets="@../style/style.css" text="Confirma Nova Senha(Obrigatório):" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="406.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSenha2" accessibleText="Este campo define o nome do usuário utilizado para relaizar o login" layoutX="3.0" layoutY="422.0" prefHeight="30.0" prefWidth="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="430.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblsbNovaSenha" layoutX="122.0" layoutY="4.0" text="Nova Senha:" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <SwitchButton fx:id="sbNovaSenha" layoutX="122.0" layoutY="24.0" AnchorPane.leftAnchor="130.0" />
+					</children>
+				</AnchorPane>
+			</center>
+			<right>
+				<AnchorPane BorderPane.alignment="CENTER">
+					<children>
+						<ImageView fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<image>
+								<Image url="@../img/Usuario_128x128.png" />
+							</image>
+						</ImageView>
+						<Button fx:id="btnSalvar" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#salvar" prefHeight="66.0" prefWidth="108.0" text="Salvar" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../img/disquette.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Button>
+						<Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" mnemonicParsing="false" onAction="#voltar" prefHeight="66.0" prefWidth="108.0" text="Voltar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0">
+							<graphic>
+								<ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../img/back.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<font>
+								<Font size="14.0" />
+							</font>
+						</Button>
+					</children>
+				</AnchorPane>
+			</right>
+		</BorderPane>
+	</children>
+</AnchorPane>
